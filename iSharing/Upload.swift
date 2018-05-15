@@ -134,8 +134,12 @@ func uploadFileToAWS(viewController: UploadViewController, session: URLSession, 
         }
         else{
             print(error ?? "")
-            let alertView = UIAlertView(title: "Alert", message: error?.localizedDescription, delegate: nil, cancelButtonTitle: "OK")
-            alertView.show()
+//            let alertView = UIAlertView(title: "Alert", message: error?.localizedDescription, delegate: nil, cancelButtonTitle: "OK")
+            let alertView = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+            let vc = UIApplication.shared.keyWindow?.rootViewController?.presentedViewController
+            let cancelAction = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+            alertView.addAction(cancelAction)
+            vc?.present(alertView, animated: true, completion: nil)
             viewController.uploadButton.isEnabled = true
         }
     }
