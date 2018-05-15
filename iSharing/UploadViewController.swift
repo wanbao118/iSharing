@@ -58,7 +58,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
             let imageURL = URL(fileURLWithPath: filePath)
             print(imageURL)
             //            let uploadURL:String = "http://ec2-52-87-151-146.compute-1.amazonaws.com:8080/s3/upload"
-                        let uploadURL:String = "http://34.224.72.166:8080/s3/upload"
+                        let uploadURL:String = "http://107.21.19.39:8080/s3/upload"
             //            let uploadURL: String = "http://127.0.0.1:8080/multipart/upload"
 //            let uploadURL: String = "http://192.168.0.100:8080/multipart/upload"
             
